@@ -41,7 +41,7 @@ export default {
         {"name":"李四","age":"24","phone":"13233421254","address":"北京"},
         {"name":"王五","age":"25","phone":"13745634587","address":"上海"},
         {"name":"赵六","age":"26","phone":"13223475643","address":"天津"}
-        ]
+      ]
     }
   },
   components: {

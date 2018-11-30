@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header></Header>
     <table>
       <thead>
         <tr>
@@ -22,12 +23,17 @@
         </tr>
       </tbody>
     </table>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+
+import Header from '@/components/views/main/Header';
+import Footer from '@/components/views/main/Footer';
+
 export default {
-  name: 'mains',
+  name: 'Home',
   data () {
     return {
       arr: [
@@ -37,6 +43,10 @@ export default {
         {"name":"赵六","age":"26","phone":"13223475643","address":"天津"}
         ]
     }
+  },
+  components: {
+    Header,
+    Footer
   }
 }
 </script>

@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="container">
     <p v-html="html"></p>
     <p>{{addNamePss}}</p>
     <p>{{getAddNamePss()}}</p>
     <p>{{fullName1}}</p>
     <p>{{fullName2}}</p>
-    <p><input type="text" name="username" v-model="username">{{username}}</p>
-    <p><input type="text" name="password" v-model="password">{{password}}</p>
+    <p><input class="form-control" type="text" name="username" v-model="username">{{username}}</p>
+    <p><input class="form-control" type="text" name="password" v-model="password">{{password}}</p>
     <select>
       <option v-for="item in arr">
         {{item}}
@@ -16,7 +16,7 @@
       <input type="radio" value="one" v-model="isRemaberMe">记住我
       <input type="radio" value="two" v-model="isRemaberMe">下次再说
     </div>
-    <button v-on:click="login">登录</button>
+    <button class="btn btn-primary" v-on:click="login">登录</button>
   </div>
 </template>
 

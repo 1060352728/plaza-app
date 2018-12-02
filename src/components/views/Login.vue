@@ -1,26 +1,44 @@
 <template>
-  <div class="container">
-    <p v-html="html"></p>
-    <p>{{addNamePss}}</p>
-    <p>{{getAddNamePss()}}</p>
-    <p>{{fullName1}}</p>
-    <p>{{fullName2}}</p>
-    <p><input class="form-control" type="text" name="username" v-model="username">{{username}}</p>
-    <p><input class="form-control" type="text" name="password" v-model="password">{{password}}</p>
-    <select>
-      <option v-for="item in arr">
-        {{item}}
-      </option>
-    </select>
-    <div>
-      <input type="radio" value="one" v-model="isRemaberMe">记住我
-      <input type="radio" value="two" v-model="isRemaberMe">下次再说
+  <!-- login -->
+  <div class="logbackcol">
+    <div class="top center">
+      <div class="logo center">
+        <a href="" target="_blank"><img src="../../../static/image/mistore_logo.png" alt=""></a>
+      </div>
     </div>
-    <button class="btn btn-primary" v-on:click="login">登录</button>
+    <form method="post" action="" class="form center">
+      <div class="login">
+        <div class="login_center">
+          <div class="login_top">
+            <div class="left fl">会员登录</div>
+            <div class="right fr">您还不是我们的会员？<a href="" target="_self">立即注册</a></div>
+            <div class="clear"></div>
+            <div class="xian center"></div>
+          </div>
+          <div class="login_main center">
+            <div class="username">用户名:&nbsp;<input class="shurukuang" type="text" name="username" placeholder="请输入你的用户名"/></div>
+            <div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;<input class="shurukuang" type="password" name="password" placeholder="请输入你的密码"/></div>
+            <div class="username">
+              <div class="left fl">验证码:&nbsp;<input class="yanzhengma" type="text" name="username" placeholder="请输入验证码"/></div>
+              <div class="right fl"><img src="../../../static/image/yanzhengma.jpg"></div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="login_submit">
+            <input class="submit" type="button" v-on:click="login" value="立即登录" >
+          </div>
+        </div>
+      </div>
+    </form>
+    <footer>
+      <div class="copyright">简体 | 繁体 | English | 常见问题</div>
+      <div class="copyright">小米公司版权所有-京ICP备10046444-<img src="../../../static/image/ghs.png" alt="">京公网安备11010802020134号-京ICP证110507号</div>
+    </footer>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'login',
   data () {
@@ -64,3 +82,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+  @import '../../../static/css/login.css';
+  .logbackcol{
+    background: rgb(20,33,42);
+  }
+</style>

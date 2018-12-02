@@ -1,6 +1,12 @@
 <template>
     <div :style = "styles" :class="[{activity: isActivity}]">
-      <p>{{addMessage}}</p>
+      <span>{{addMessage}}</span><slot></slot>
+      <div class="header">
+        <slot name="header"></slot>
+      </div>
+      <div class="body">
+        <slot name="body" seller="seller" buyer="buyer"></slot>
+      </div>
       <p v-on:click="showMessage(isShow)">{{welcomes}}</p>
       <div v-if="isShow">{{mesg}}</div>
       <div v-show="isShow">{{mesg}}</div>

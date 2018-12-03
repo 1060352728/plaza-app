@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     login: function (){
-      this.$router.push({path: '/main'});
+      this.$router.replace({path: '/main'});
     },
     getAddNamePss(){
       console.log("getAddNamePss==========================");
